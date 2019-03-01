@@ -6,7 +6,7 @@ const { getCampground } = require('./campy');
 
 const CLIENTID = '429006506085.557284316289';
 const CLIENTSECRET = 'ef2706efc58a636071b44777a46c99a5';
-const PORT = 3000;
+const PORT = 4390;
 
 // Instantiates Express and assigns our app variable to it
 let app = express();
@@ -58,7 +58,10 @@ app.post('/checkngrok', (req, res) => {
 
 app.post('/campgrounds', async (req, res) => {
     res.status(200);
-    res.send("Finding available campgrounds for you...")
+    res.send({
+            response_type: "in_channel",
+            text: "Finding available campgrounds for you..."
+    });
 
     let rs = await getCampground(req.body.text);
 
@@ -69,6 +72,7 @@ app.post('/campgrounds', async (req, res) => {
     request({
         url: req.body.response_url,
         body: {
+            "response_type": "in_channel",
             type: 'mrkdwn',
             text
         },
