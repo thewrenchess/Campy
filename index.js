@@ -79,6 +79,4 @@ app.post('/campgrounds', async (req, res) => {
             console.log(err);
         }
     });
-
-    console.log(rs);
 });
