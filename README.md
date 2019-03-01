@@ -8,8 +8,6 @@ Adding a Slash Comment on Slack to find campgrounds with different criterias
 ## Run
 `npm run start`
 
-[I'm an inline-style link](https://www.google.com)
-
 ## To Run Locally
 1. [Set Up Local Development Environment with ngrok](https://api.slack.com/tutorials/tunneling-with-ngrok)
 2. [Set Up Slash Command with Slack](https://api.slack.com/slash-commands)
