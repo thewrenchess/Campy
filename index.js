@@ -6,7 +6,7 @@ const { getCampground } = require('./campy');
 
 const CLIENTID = '429006506085.557284316289';
 const CLIENTSECRET = 'ef2706efc58a636071b44777a46c99a5';
-const PORT = 4390;
+const PORT = 3000;
 
 // Instantiates Express and assigns our app variable to it
 let app = express();
