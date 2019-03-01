@@ -14,8 +14,9 @@ let app = express();
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true })); 
 
-app.listen(PORT, () => {
-    console.log(`App Listening on port ${ PORT }`);
+
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`App Listening on port ${ process.env.PORT || PORT }`);
 });
 
 app.get('/', (req, res) => {
